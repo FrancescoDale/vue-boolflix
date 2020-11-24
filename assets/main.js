@@ -5,8 +5,14 @@ var app = new Vue ({
         moviesList : []
     },
     methods : {
-        //controllo if per verificare che l'input non sia una stringa vuota
-        if
+
+        movieSrc() {
+            //controllo if per verificare che l'input non sia una stringa vuota
+            if(this.inputSearch != '') {
+                console.log('funziona');
+
+            };
+        },
     },
     mounted() {},
 });

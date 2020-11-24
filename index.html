@@ -17,8 +17,8 @@
             <div class="container">
                 <div class="searchbar mt-4">
                     <i class="fas fa-search"></i>
-                    <input type="text" name="" value="" placeholder="cerca">
-                    <button class="text-uppercase btn default-btn" type="button" name="button">cerca</button>
+                    <input v-model="inputSearch" type="text" name="" value="" placeholder="cerca">
+                    <button v-on:click="movieSrc()" class="text-uppercase btn default-btn" type="button" name="button">cerca</button>
 
                 </div>
                 <main>
