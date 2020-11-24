@@ -5,7 +5,9 @@
 }
 
 main {
-
+    padding: 40px 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 input {
@@ -15,6 +17,10 @@ input {
 button {
     width: 20%;
     height: 100%;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .container {
@@ -28,6 +34,11 @@ button {
     justify-content: space-between;
 }
 
-ul {
-    list-style-type: none;
+.cardbox {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 250px;
+    background-color: black;
+    margin: 10px 30px;
 }
