@@ -19,8 +19,9 @@ button {
     height: 100%;
 }
 
-ul {
-    list-style-type: none;
+p {
+    font-size: 20px;
+    margin: 5px 5px;
 }
 
 .container {
@@ -39,6 +40,6 @@ ul {
     flex-direction: column;
     height: 350px;
     width: 250px;
-    background-color: black;
+    background-color: lightblue;
     margin: 10px 30px;
 }
