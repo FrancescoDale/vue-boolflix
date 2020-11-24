@@ -3,3 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+
+}
+
+input {
+    width: 70%;
+}
+
+button {
+    width: 20%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+}
