@@ -22,13 +22,11 @@
 
                 </div>
                 <main>
-                    <div class="cardbox text-capitalize" v-for="(item, index) in moviesList">
-                        <ul>
-                            <li>{{item.title}}</li>
-                            <li>{{item.vote_average}}</li>
-                            <li>{{item.release_date}}</li>
-                            <li></li>
-                        </ul>
+                    <div class="cardbox text-capitalize"  v-for="item in moviesList">
+                        <p>{{item.title}}</p>
+                        <p>{{item.original_language}}</p>
+                        <p>{{item.release_date}}</p>
+                        <p>{{item.vote_average}}</p>
 
                     </div>
                 </main>

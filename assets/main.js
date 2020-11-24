@@ -13,9 +13,12 @@ var app = new Vue ({
                     query : this.inputSearch,
                 } })
                 .then((response) => {
-                    this.moviesList = response.data.response;
-                })
-            }
+                    console.log(response.data.results);
+                    this.moviesList = response.data.results;
+                    // pulisce l'input
+                    this.inputSearch = '';
+                });
+            };
         },
 
     },
