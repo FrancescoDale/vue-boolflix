@@ -20,6 +20,10 @@ var app = new Vue ({
                 });
             };
         },
+        //funzione che converte il voto da base 10 a base 5
+        calcVote(vote_average) {
+            return Math.round((vote_average * 5) / 10);
+        }
 
     },
 

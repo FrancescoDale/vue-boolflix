@@ -35,6 +35,10 @@ p {
     justify-content: space-between;
 }
 
+.searchbar i {
+    height: 100%;
+}
+
 .cardbox {
     display: flex;
     flex-direction: column;
