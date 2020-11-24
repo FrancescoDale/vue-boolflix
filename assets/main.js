@@ -12,8 +12,15 @@ var app = new Vue ({
                 // console.log('funziona');
                 axios
                 //chiamata API + parametri
-                .get('https://api.themoviedb.org/3/movie', params : {})
-                .then
+                .get('https://api.themoviedb.org/3/movie',
+                    { params : {
+                        api_key : 'b2051a7083718dd2e6253bdfd616ec4e',
+                        query : this.inputSearch,
+                    }
+                })
+                .then((response) => {
+                    console.log(response.data.response);
+                });
 
             };
         },
