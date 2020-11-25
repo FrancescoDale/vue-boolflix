@@ -22,7 +22,7 @@
                 </div>
                 <h3 v-if="displaySearch != '' " class="text-capitalize mt-4">hai cercato : " {{ displaySearch }}"</h3>
                 <main>
-                    <div class="cardbox text-capitalize"  v-for="item in moviesList">
+                    <div class="cardbox text-capitalize"  v-for="item in searchList">
                         <img v-bind:src="baseUrl + 'w154' + item.poster_path">
                         <p>titolo : {{item.title}}</p>
                         <p>titolo originale : {{ item.original_title }}</p>

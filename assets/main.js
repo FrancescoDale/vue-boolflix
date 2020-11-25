@@ -3,7 +3,7 @@ var app = new Vue ({
     data : {
         inputSearch : '',
         displaySearch : '',
-        resultList : [],
+        searchList : [],
         moviesList : [],
         seriesList : [],
         baseUrl : 'https://image.tmdb.org/t/p/'
@@ -22,8 +22,8 @@ var app = new Vue ({
                     console.log(response.data.results);
                     this.moviesList = response.data.results;
                 });
-                // pulisce l'input
-                this.inputSearch = '';
+                // // pulisce l'input
+                // this.inputSearch = '';
                 // chiamata per le serie tv
                 axios
                 .get('https://api.themoviedb.org/3/search/tv', { params : {
@@ -32,7 +32,10 @@ var app = new Vue ({
                     language :'it',
                 } })
                 .then( (response) => {
+                    // riempio l'array
                     this.seriesList = response.data.results;
+                    // riempio l'array dei risultati
+                    this.searchList = this.moviesList.concat(this.seriesList);
                     // pulisce l'input
                     this.inputSearch = '';
                 })
