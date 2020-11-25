@@ -4,8 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
 #root {
     min-height: 100vh;
+}
+
+h1 {
+    color: red;
+    font-weight: bold;
 }
 
 main {
@@ -42,6 +51,7 @@ p {
 
 .searchbar i {
     height: 100%;
+    color: #FFF;
 }
 
 .cardbox {
