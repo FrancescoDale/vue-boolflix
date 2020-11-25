@@ -3,6 +3,7 @@ var app = new Vue ({
     data : {
         inputSearch : '',
         displaySearch : '',
+        resultList : [],
         moviesList : [],
         seriesList : [],
         baseUrl : 'https://image.tmdb.org/t/p/'
@@ -30,6 +31,9 @@ var app = new Vue ({
                     query : this.inputSearch,
                     language :'it',
                 } })
+                .then( (response) => {
+                    this.seriesList = response.data.results;
+                })
             };
 
         },
