@@ -3,7 +3,8 @@ var app = new Vue ({
     data : {
         inputSearch : '',
         displaySearch : '',
-        moviesList : []
+        moviesList : [],
+        baseUrl : ''
     },
     methods : {
         movieSrc() {
@@ -13,6 +14,7 @@ var app = new Vue ({
                 .get('https://api.themoviedb.org/3/search/movie', { params : {
                     api_key : 'b2051a7083718dd2e6253bdfd616ec4e',
                     query : this.inputSearch,
+                    language :'it',
                 } })
                 .then((response) => {
                     console.log(response.data.results);
