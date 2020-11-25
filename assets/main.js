@@ -19,7 +19,6 @@ var app = new Vue ({
                     language :'it',
                 } })
                 .then((response) => {
-                    console.log(response.data.results);
                     this.moviesList = response.data.results;
                 });
                 // // pulisce l'input
@@ -36,6 +35,7 @@ var app = new Vue ({
                     this.seriesList = response.data.results;
                     // riempio l'array dei risultati
                     this.searchList = this.moviesList.concat(this.seriesList);
+                    console.log(this.searchList);
                     // pulisce l'input
                     this.inputSearch = '';
                 })
