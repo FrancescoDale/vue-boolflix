@@ -23,6 +23,13 @@ var app = new Vue ({
                 });
                 // pulisce l'input
                 this.inputSearch = '';
+                // chiamata per le serie tv
+                axios
+                .get('https://api.themoviedb.org/3/search/tv', { params : {
+                    api_key : 'b2051a7083718dd2e6253bdfd616ec4e',
+                    query : this.inputSearch,
+                    language :'it',
+                } })
             };
 
         },
