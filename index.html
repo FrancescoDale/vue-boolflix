@@ -20,6 +20,7 @@
                     <input v-on:keyup.enter="movieSrc()" v-model="inputSearch" type="text" name="" value="" placeholder="cerca">
                     <button v-on:click="movieSrc()" class="text-uppercase btn default-btn" type="button" name="button">cerca</button>
                 </div>
+                <h3 v-if="displaySearch != '' " class="text-capitalize mt-4">hai cercato : " {{ displaySearch }}"</h3>
                 <main>
                     <div class="cardbox text-capitalize"  v-for="item in moviesList">
                         <p>{{item.title}}</p>
