@@ -30,7 +30,7 @@
                         <p>{{item.vote_average}}</p>
                         <div class="">
                             <i v-for="item2 in calcVote(item.vote_average)" class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i v-for="item2 in (5 - calcVote(item.vote_average))"  class="far fa-star"></i>
                         </div>
 
                     </div>
