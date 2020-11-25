@@ -67,10 +67,9 @@ h3 {
     width: 15%;
 }
 
-.cardbox {    
+.cardbox {
     display: flex;
-    flex-direction: column;
-    height: 350px;
+    flex-direction: column;    
     width: 250px;
     background-color: lightblue;
     margin: 10px 30px;
