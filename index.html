@@ -25,8 +25,8 @@
                 </header>
                 <main>
                     <div class="cardbox"  v-for="item in searchList">
-                        <img v-bind:src="baseUrl + 'w154' + item.poster_path">
-                        <p class="text-capitalize">titolo : {{item.title}}</p>
+                        <img v-bind:src="baseUrl + 'w154' + item.poster_path" alt="locandina">
+                        <p class="text-capitalize">titolo : {{item.title ? item.title : item.name }}</p>
                         <p class="text-capitalize">titolo originale : {{ item.original_title }}</p>
                         <p class="text-capitalize">lingua originale : {{item.original_language}}</p>
                         <p>Anno : {{item.release_date}}</p>
