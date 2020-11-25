@@ -13,13 +13,12 @@
     </head>
     <body>
         <div id="root">
-            <h1 class="text-center text-uppercase mt-2">boolflix</h1>
             <div class="container">
                 <div class="searchbar mt-4">
+                    <p class="text-left text-uppercase">boolflix</p>
                     <i class="fas fa-search"></i>
                     <input v-on:keyup.enter="movieSrc()" v-model="inputSearch" type="text" name="" value="" placeholder="cerca">
                     <button v-on:click="movieSrc()" class="text-uppercase btn default-btn" type="button" name="button">cerca</button>
-
                 </div>
                 <main>
                     <div class="cardbox text-capitalize"  v-for="item in moviesList">
