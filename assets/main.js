@@ -33,6 +33,8 @@ var app = new Vue ({
                 } })
                 .then( (response) => {
                     this.seriesList = response.data.results;
+                    // pulisce l'input
+                    this.inputSearch = '';
                 })
             };
 
@@ -43,7 +45,5 @@ var app = new Vue ({
         }
 
     },
-
-
     mounted() {},
 });
