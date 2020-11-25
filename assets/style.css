@@ -59,18 +59,17 @@ h3 {
     color: #FFF;
 }
 
-.searchbar p {
-    text-transform: capitalize;
-    font-size: 20px;
-    font-weight: bold;
-    color: red;
-    width: 15%;
-}
-
 .cardbox {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     width: 250px;
     background-color: lightblue;
     margin: 10px 30px;
+}
+
+.cardbox p {
+    font-style: italic;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
 }
