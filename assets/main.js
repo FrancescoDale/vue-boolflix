@@ -4,6 +4,7 @@ var app = new Vue ({
         inputSearch : '',
         displaySearch : '',
         moviesList : [],
+        seriesList : [],
         baseUrl : 'https://image.tmdb.org/t/p/'
     },
     methods : {
