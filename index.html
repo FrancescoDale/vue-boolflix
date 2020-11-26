@@ -25,11 +25,12 @@
                 </header>
                 <main>
                     <div class="cardbox"  v-for="item in searchList">
-                        <img v-bind:src="baseUrl + 'w154' + item.poster_path" alt="locandina">
+                        <img v-if="item.poster_path != null" v-bind:src="baseUrl + 'w154' + item.poster_path" alt="locandina">
+                        <img v-else src="https://www.stefanogatti.net/wp-content/uploads/2017/11/img-prova.jpg" alt="">
                         <p class="text-capitalize">titolo : {{item.title ? item.title : item.name }}</p>
                         <p class="text-capitalize">titolo originale : {{ item.original_title ? item.original_title : item.original_name }}</p>
-                        <span>
-                            <p class="text-capitalize">lingua originale : {{item.original_language}} <img  v-bind:src="'img/' + item.original_language  + '.png'" v-bind:alt="item.original_language"> </p>                            
+                        <span >
+                            <p class="text-capitalize">lingua originale :  <img v-bind:src="'img/' + item.original_language  + '.png'" v-bind:alt="item.original_language"> </p>
                         </span>
                         <p>Anno : {{item.release_date ? item.release_date : item.first_air_date }}</p>
                         <p class="text-capitalize">voto medio : {{item.vote_average}}</p>
