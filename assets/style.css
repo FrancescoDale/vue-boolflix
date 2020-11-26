@@ -25,7 +25,10 @@ input {
 button {
     width: 15%;
     height: 100%;
-    background-color: lightgreen;
+    background-color: red;
+    color: black;
+    font-size: bold;
+    align-self: flex-end;
 }
 
 p {
@@ -35,7 +38,7 @@ p {
 
 h1 {
     font-size: 20px;
-    color: red;
+    color: red;    
 }
 
 h3 {
