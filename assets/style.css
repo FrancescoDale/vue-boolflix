@@ -82,6 +82,11 @@ h3 {
     width: 20px;
 }
 
+.cardbox img {
+    height: 154px;
+    width: 100%;
+}
+
 .cardbox span:last-of-type {
     overflow-y: scroll;
     max-height: 150px;
