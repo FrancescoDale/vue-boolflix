@@ -6,6 +6,7 @@ var app = new Vue ({
         searchList : [],
         moviesList : [],
         seriesList : [],
+        // flags : [it, en, de, fr],
         baseUrl : 'https://image.tmdb.org/t/p/'
     },
     methods : {
