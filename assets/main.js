@@ -6,7 +6,7 @@ var app = new Vue ({
         searchList : [],
         moviesList : [],
         seriesList : [],
-        flags : ['it','en','de','fr'],      
+        flags : ['it','en','de','fr'],
         baseUrl : 'https://image.tmdb.org/t/p/'
     },
     methods : {
@@ -21,6 +21,7 @@ var app = new Vue ({
                 } })
                 .then((response) => {
                     this.moviesList = response.data.results;
+                    this.searchList = this.searchList.concat(this.moviesList);
                 });
                 // // pulisce l'input
                 // this.inputSearch = '';
@@ -35,7 +36,7 @@ var app = new Vue ({
                     // riempio l'array
                     this.seriesList = response.data.results;
                     // riempio l'array dei risultati
-                    this.searchList = this.moviesList.concat(this.seriesList);
+                    this.searchList = this.searchList.concat(this.seriesList);
                     console.log(this.searchList);
                     // pulisce l'input
                     this.inputSearch = '';
