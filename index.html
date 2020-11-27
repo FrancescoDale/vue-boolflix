@@ -25,23 +25,25 @@
                 </header>
                 <main>
                     <div class="cardbox"  v-for="item in searchList">
-                        <div class="card_front">
-                            <img v-if="item.poster_path != null" v-bind:src="baseUrl + 'w154' + item.poster_path" alt="locandina">
-                            <img v-else src="https://webhostingmedia.net/wp-content/uploads/2018/01/http-error-404-not-found.png" alt="not found">
-                        </div>
-                        <div class="card_back">
-                            <p class="text-capitalize">titolo : {{item.title ? item.title : item.name }}</p>
-                            <p class="text-capitalize">titolo originale : {{ item.original_title ? item.original_title : item.original_name }}</p>
-                            <span >
-                                <p v-if="flags.includes(item.original_language)" class="text-capitalize">lingua originale :  <img  v-bind:src="'img/' + item.original_language  + '.png'" v-bind:alt="item.original_language"> </p>
-                                <p v-else class="text-capitalize">lingua originale : {{ item.original_language }}</p>
-                            </span>
-                            <p>Anno : {{item.release_date ? item.release_date : item.first_air_date }}</p>
-                            <p class="text-capitalize">voto medio : {{item.vote_average}}</p>
-                            <span>Overview : {{ item.overview }}</span>
-                            <div class="">
-                                <i v-for="item2 in calcVote(item.vote_average)" class="fas fa-star"></i>
-                                <i v-for="item2 in (5 - calcVote(item.vote_average))"  class="far fa-star"></i>
+                        <div class="card_inner">
+                            <div class="card_front">
+                                <img v-if="item.poster_path != null" v-bind:src="baseUrl + 'w154' + item.poster_path" alt="locandina">
+                                <img v-else src="https://webhostingmedia.net/wp-content/uploads/2018/01/http-error-404-not-found.png" alt="not found">
+                            </div>
+                            <div class="card_back">
+                                <p class="text-capitalize">titolo : {{item.title ? item.title : item.name }}</p>
+                                <p class="text-capitalize">titolo originale : {{ item.original_title ? item.original_title : item.original_name }}</p>
+                                <span >
+                                    <p v-if="flags.includes(item.original_language)" class="text-capitalize">lingua originale :  <img  v-bind:src="'img/' + item.original_language  + '.png'" v-bind:alt="item.original_language"> </p>
+                                    <p v-else class="text-capitalize">lingua originale : {{ item.original_language }}</p>
+                                </span>
+                                <p>Anno : {{item.release_date ? item.release_date : item.first_air_date }}</p>
+                                <p class="text-capitalize">voto medio : {{item.vote_average}}</p>
+                                <span>Overview : {{ item.overview }}</span>
+                                <div class="">
+                                    <i v-for="item2 in calcVote(item.vote_average)" class="fas fa-star"></i>
+                                    <i v-for="item2 in (5 - calcVote(item.vote_average))"  class="far fa-star"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
